@@ -105,3 +105,163 @@ a {
     color-scheme: dark;
   }
 }
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  display: block;
+  line-height: 1;
+}
+
+header a,
+header a:focus,
+header a:active,
+header a:visited {
+  color: #111;
+}
+
+header a:hover {
+  color: #333;
+}
+
+header select {
+  margin-left: 1em;
+}
+
+.overview-example__add {
+  display: none;
+}
+
+.react-flow__node a {
+  font-weight: 700;
+  color: #111;
+}
+
+.react-flow__node.dark-node {
+  background: #0041d0;
+  color: #f8f8f8;
+}
+
+.react-flow__node.dark {
+  background: #557;
+  color: #f8f8f8;
+}
+
+.react-flow__node-selectorNode {
+  font-size: 12px;
+  background: #f0f2f3;
+  border: 1px solid 555;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.react-flow__node-selectorNode .react-flow__handle {
+  border-color: #f0f2f3;
+}
+
+@media screen and (min-width: 768px) {
+  .overview-example__add {
+    display: block;
+  }
+}
+
+.dndflow .dndnode.input {
+  border-color: #0041d0;
+}
+
+.dndflow .dndnode.output {
+  border-color: #ff0072;
+}
+
+.dndflow .dndnode {
+  align-items: center;
+  border: 1px solid #1a192b;
+  border-radius: 2px;
+  cursor: grab;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  padding: 4px;
+}
+
+.dndflow .dndnode,
+.dndflow aside .description {
+  margin-bottom: 10px;
+}
+
+
+
+.dndflow {
+  flex-direction: row;
+  display: flex;
+  height: 100vh;
+}
+
+.dndflow aside {
+  border-right: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: #fcfcfc;
+  width: 30vh;
+}
+
+.dndflow aside > * {
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+.dndflow aside .description {
+  margin-bottom: 10px;
+}
+
+.dndflow .reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .dndflow {
+    flex-direction: row;
+  }
+
+  .dndflow aside {
+    width: 20%;
+    max-width: 180px;
+  }
+}
+
+
+
+.updatenode__controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 4;
+  font-size: 12px;
+}
+
+.updatenode__controls label {
+  display: block;
+}
+
+.updatenode__bglabel {
+  margin-top: 10px;
+}
+
+.updatenode__checkboxwrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
