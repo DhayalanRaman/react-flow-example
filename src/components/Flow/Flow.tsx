@@ -1,3 +1,4 @@
+"use client"
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import ReactFlow, {
   addEdge,
@@ -121,16 +122,18 @@ const Flow: React.FC = () => {
   // Function to handle save button click
   const saveHandler = (): void => {
     if (isAllNodeisConnected(nodes, edges)) {
-      alert("Congrats its correct");
+      alert("Flow Saved");
     } else {
-      alert("Please connect source nodes (Cannot Save Flow)");
+      alert("Cannot Save Flow");
     }
   };
 
   // Render the component
   return (
-    <>
-      <button onClick={saveHandler}>Save</button>
+    <div>
+      <div style={{display: "flex", justifyContent: "end", marginBottom: "5px"}}>
+      <button className="dndnode-btn"  onClick={saveHandler}>Save Changes</button>          
+      </div>
       <div className="dndflow">
         <ReactFlowProvider>
           <div className="reactflow-wrapper" ref={reactFlowWrapper}>
@@ -158,7 +161,7 @@ const Flow: React.FC = () => {
           />
         </ReactFlowProvider>
       </div>
-    </>
+    </div>
   );
 };
 

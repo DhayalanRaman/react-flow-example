@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import EditMessage from "../EditMessage/EditMessage";
+import Image from "next/image";
 
 // Props interface defining the structure of props passed to Sidebar component
 interface Props {
@@ -31,11 +32,18 @@ const Sidebar: React.FC<Props> = ({ isSelected, textRef, nodeName, setNodeName }
       ) : (
         // Render draggable message node if no node is selected
         <div
-          className="dndnode input"
+          className="dndnode-btn"
           onDragStart={(event) => onDragStart(event, "node", "message")}
           draggable
+          style={{display: "flex", alignItems: "center"}}
         >
-          Message
+            <Image
+            src="/assets/message.svg"
+            alt="message"
+            width={20}
+            height={20}
+          />
+          <span>Message</span>
         </div>
       )}
     </aside>

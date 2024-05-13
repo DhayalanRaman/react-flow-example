@@ -265,3 +265,9 @@ header select {
   align-items: center;
 }
 
+.dndnode-btn{
+  color: darkblue;
+  border: 1px solid darkblue;
+  margin: 2px;
+  padding: 8px 12px;
+}
